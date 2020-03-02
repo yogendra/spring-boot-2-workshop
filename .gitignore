@@ -34,3 +34,4 @@ mvn*
 .java-version
 .DS_Store
 Dockerfile.cf
+.cf/
