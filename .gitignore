@@ -33,4 +33,4 @@ build/
 mvn*
 .java-version
 .DS_Store
-Dockerfile
+Dockerfile.cf
