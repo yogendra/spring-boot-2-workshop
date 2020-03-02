@@ -1,8 +1,10 @@
 package io.humourmind.cnspringgateway.config;
 
+import feign.codec.Decoder;
 import org.springframework.boot.actuate.autoconfigure.security.reactive.EndpointRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.codec.json.Jackson2JsonDecoder;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;
@@ -21,10 +23,11 @@ public class SecurityConfig {
 		//@formatter:off
 		return http
 				.authorizeExchange().matchers(EndpointRequest.toAnyEndpoint()).permitAll()
+//				.and()
+//				.authorizeExchange().anyExchange().authenticated()
+//				.and().formLogin()
 				.and()
-				.authorizeExchange().anyExchange().authenticated()
-				.and().formLogin()
-				.and().build();
+				.build();
 		//@formatter:on
 	}
 
@@ -39,4 +42,5 @@ public class SecurityConfig {
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+
 }
