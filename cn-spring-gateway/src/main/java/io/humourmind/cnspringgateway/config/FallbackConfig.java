@@ -2,9 +2,10 @@ package io.humourmind.cnspringgateway.config;
 
 import java.time.Duration;
 
-import org.springframework.cloud.circuitbreaker.commons.Customizer;
+
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuitBreakerFactory;
 import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JConfigBuilder;
+import org.springframework.cloud.client.circuitbreaker.Customizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
