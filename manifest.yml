@@ -2,7 +2,7 @@ defaults: &defaults
   memory: 768M
   instances: 1
   timeout: 180
-  random-route: true
+#  random-route: true
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
   services:
@@ -11,13 +11,25 @@ defaults: &defaults
 applications:
 - name: cn-asd-service
   path: cn-spring-asd/target/cn-spring-asd-1.0.0.jar
+  routes:
+    - cn-asd-service-yrampuria.apps.internal
+    - cn-asd-service-yrampuria.apps.pcfone.io
   <<: *defaults
 - name: cn-city-service
   path: cn-spring-city/target/cn-spring-city-1.0.0.jar
+  routes:
+    - cn-city-service-yrampuria.apps.internal
+    - cn-city-service-yrampuria.apps.pcfone.io
   <<: *defaults
 - name: cn-weather-service
   path: cn-spring-weather/target/cn-spring-weather-1.0.0.jar
+  routes:
+    - cn-weather-service-yrampuria.apps.internal
+    - cn-weather-service-yrampuria.apps.pcfone.io
   <<: *defaults
 - name: cn-gateway-service
   path: cn-spring-gateway/target/cn-spring-gateway-1.0.0.jar
+  routes:
+    - cn-gateway-service-yrampuria.apps.internal
+    - cn-gateway-service-yrampuria.apps.pcfone.io
   <<: *defaults

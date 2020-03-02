@@ -10,3 +10,6 @@ applications:
   - cn-config-service
   - cn-registry-service
 #  - cn-cb-service
+  - routes:
+    - cn-gateway-service-yrampuria.apps.internal
+    - cn-gateway-service-yrampuria.apps.pcfone.io

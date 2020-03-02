@@ -1,5 +1,5 @@
 applications:
-- name: auth-service
+- name: cn-security-service
   memory: 768M
   instances: 1
   path: ./target/cn-spring-security-0.0.1-SNAPSHOT.jar
@@ -9,4 +9,5 @@ applications:
   services:
   - cns-registry-service
   routes:
-  - route: https://sv-cn-spring-security.cfapps.io
+  - cn-security-service-yrampuria.apps.internal
+  - cn-security-service-yrampuria.apps.pcfone.io

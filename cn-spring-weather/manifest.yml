@@ -9,3 +9,6 @@ applications:
   services:
   - cn-config-service
   - cn-registry-service
+  routes:
+  - cn-weather-service-yrampuria.apps.internal
+  - cn-weather-service-yrampuria.apps.pcfone.io

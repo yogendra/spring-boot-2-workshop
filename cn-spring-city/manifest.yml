@@ -9,3 +9,7 @@ applications:
   services:
   - cn-registry-service
   - cn-config-service
+  routes:
+    - cn-city-service-yrampuria.apps.internal
+    - cn-city-service-yrampuria.apps.pcfone.io
+
