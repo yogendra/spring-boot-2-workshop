@@ -35,3 +35,4 @@ mvn*
 .DS_Store
 Dockerfile.cf
 .cf/
+vars.yml
